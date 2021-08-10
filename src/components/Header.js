@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,27 +8,48 @@ function Header() {
       <Logo src="/images/logo.svg" />
       <NavMenu>
         <a>
-          <img src="/images/home-icon.svg" />
-          <span>HOME</span>
+          <img src="/images/home-icon.svg" alt="" />
+          <span>
+            <NavLink activeClassName="is-active" to="/">
+              HOME
+            </NavLink>
+          </span>
+        </a>
+
+        <a>
+          <img src="/images/search-icon.svg" alt="" />
+          <span>
+            <NavLink activeClassName="is-active" to="/search">
+              SEARCH
+            </NavLink>
+          </span>
         </a>
         <a>
-          <img src="/images/search-icon.svg" />
-          <span>SEARCH</span>
+          <img src="/images/watchlist-icon.svg" alt="" />
+          <span>
+            <NavLink activeClassName="is-active" to="/watchlist">
+              WATCHLIST
+            </NavLink>
+          </span>
         </a>
         <a>
-          <img src="/images/watchlist-icon.svg" />
-          <span>WATCHLIST</span>
+          <img src="/images/movie-icon.svg" alt="" />
+          <span>
+            <NavLink activeClassName="is-active" to="/movies">
+              MOVIES
+            </NavLink>
+          </span>
         </a>
         <a>
-          <img src="/images/movie-icon.svg" />
-          <span>MOVIES</span>
-        </a>
-        <a>
-          <img src="/images/series-icon.svg" />
-          <span>SERIES</span>
+          <img src="/images/series-icon.svg" alt="" />
+          <span>
+            <NavLink activeClassName="is-active" to="/series">
+              SERIES
+            </NavLink>
+          </span>
         </a>
       </NavMenu>
-      <UserImg src="https://randomuser.me/api/portraits/men/27.jpg" />
+      <UserImg src="https://randomuser.me/api/portraits/men/27.jpg" alt="" />
     </Nav>
   );
 }
@@ -53,11 +75,17 @@ const NavMenu = styled.div`
   margin-left: 20px;
   justify-content: space-around;
 
+  .is-active {
+    font-weight: bold;
+  }
+
   a {
     display: flex;
     align-items: center;
     padding: 0 12px;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 
     img {
       height: 20px;

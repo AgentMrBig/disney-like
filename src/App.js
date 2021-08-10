@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Detail from "./components/Detail";
 
 function App() {
@@ -10,14 +10,10 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        Detail
+
         <Switch>
-          <Route exact path="detail">
-            <Detail />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/detail" component={Detail} />
         </Switch>
       </Router>
     </div>
