@@ -7,47 +7,27 @@ function Header() {
     <Nav>
       <Logo src="/images/logo.svg" />
       <NavMenu>
-        <a>
+        <NavLink activeClassName="is-active" to="/">
           <img src="/images/home-icon.svg" alt="" />
-          <span>
-            <NavLink activeClassName="is-active" to="/">
-              HOME
-            </NavLink>
-          </span>
-        </a>
+          <span>HOME</span>
+        </NavLink>
 
-        <a>
+        <NavLink activeClassName="is-active" to="/search">
           <img src="/images/search-icon.svg" alt="" />
-          <span>
-            <NavLink activeClassName="is-active" to="/search">
-              SEARCH
-            </NavLink>
-          </span>
-        </a>
-        <a>
+          <span>SEARCH</span>
+        </NavLink>
+        <NavLink activeClassName="is-active" to="/watchlist">
           <img src="/images/watchlist-icon.svg" alt="" />
-          <span>
-            <NavLink activeClassName="is-active" to="/watchlist">
-              WATCHLIST
-            </NavLink>
-          </span>
-        </a>
-        <a>
+          <span>WATCHLIST</span>
+        </NavLink>
+        <NavLink activeClassName="is-active" to="/movies">
           <img src="/images/movie-icon.svg" alt="" />
-          <span>
-            <NavLink activeClassName="is-active" to="/movies">
-              MOVIES
-            </NavLink>
-          </span>
-        </a>
-        <a>
+          <span>MOVIES</span>
+        </NavLink>
+        <NavLink activeClassName="is-active" to="/series">
           <img src="/images/series-icon.svg" alt="" />
-          <span>
-            <NavLink activeClassName="is-active" to="/series">
-              SERIES
-            </NavLink>
-          </span>
-        </a>
+          <span>SERIES</span>
+        </NavLink>
       </NavMenu>
       <UserImg src="https://randomuser.me/api/portraits/men/27.jpg" alt="" />
     </Nav>
