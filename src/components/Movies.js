@@ -1,59 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { selectMovies } from "../features/movie/movieSlice";
+import { useSelector } from "react-redux";
 
 function Movies() {
+  const movies = useSelector(selectMovies);
+
   return (
     <Container>
       <h4>Recomended for You</h4>
       <Content>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
-        <Wrap>
-          <img
-            src="https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqbVpLVWNaVnJZN1dOMHFSeXBoMVUxZlV2UHNzd3xBQ3Jtc0tucUlJOWo1S21LbnFoUVBaYmpkS2dRYlkxX1RaQ0lwNEFleWR0VG1aWTNKZVM1QVZMSUY4Wnppc3k5ME5vUDBvaGlVTE15d193aU1kRXpIUDFKQ2hWdTVFR2UtRldxYWs0RUdxU01KSzNmZWNwMVAzZw&q=https%3A%2F%2Fprod-ripcut-delivery.disney-plus.net%2Fv1%2Fvariant%2Fdisney%2F6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C%2Fscale%3Fwidth%3D400%26aspectRatio%3D1.78%26format%3Djpeg"
-            alt=""
-          />
-        </Wrap>
+        {movies &&
+          movies.map((movie) => (
+            <Wrap key={movie.id}>
+              <Link to={`/detail/${movie.id}`}>
+                <img src={movie.cardImg} alt="" />
+              </Link>
+            </Wrap>
+          ))}
       </Content>
     </Container>
   );
@@ -61,7 +26,9 @@ function Movies() {
 
 export default Movies;
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin-bottom: 20px;
+`;
 
 const Content = styled.div`
   display: grid;

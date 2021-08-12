@@ -15,7 +15,7 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/detail" component={Detail} />
+          <Route path="/detail/:id" component={Detail} />
           <Route path="/login" component={Login} />
           <Route path="/chart" component={TVChart} />
         </Switch>

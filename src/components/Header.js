@@ -7,24 +7,24 @@ function Header() {
     <Nav>
       <Logo src="/images/logo.svg" />
       <NavMenu>
-        <NavLink activeClassName="is-active" to="/">
+        <NavLink className="NavLinkStyle" to="/">
           <img src="/images/home-icon.svg" alt="" />
           <span>HOME</span>
         </NavLink>
 
-        <NavLink activeClassName="is-active" to="/search">
+        <NavLink className="NavLinkStyle" to="/search">
           <img src="/images/search-icon.svg" alt="" />
           <span>SEARCH</span>
         </NavLink>
-        <NavLink activeClassName="is-active" to="/watchlist">
+        <NavLink className="NavLinkStyle" to="/watchlist">
           <img src="/images/watchlist-icon.svg" alt="" />
           <span>WATCHLIST</span>
         </NavLink>
-        <NavLink activeClassName="is-active" to="/movies">
+        <NavLink className="NavLinkStyle" to="/movies">
           <img src="/images/movie-icon.svg" alt="" />
           <span>MOVIES</span>
         </NavLink>
-        <NavLink activeClassName="is-active" to="/series">
+        <NavLink className="NavLinkStyle" to="/series">
           <img src="/images/series-icon.svg" alt="" />
           <span>SERIES</span>
         </NavLink>
@@ -53,16 +53,12 @@ const NavMenu = styled.div`
   display: flex;
   flex: 1;
   margin-left: 20px;
-  justify-content: space-around;
+  align-items: center;
 
-  .is-active {
-    font-weight: bold;
-  }
-
-  a {
+  .NavLinkStyle {
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    padding: 0 30px;
     cursor: pointer;
     color: white;
     text-decoration: none;
